@@ -58,7 +58,7 @@ def product(response):
 	       lan = i.xpath('td/text()').extract()[1].strip()
 	
 	if title:
-		data = {"Logo Url":logo_url,"Title":title,"Sub-Title":sub_title,"Primary Location":primary_location,"Area Of Expertise":area_of_expertise,"About":about_text,"Website":website,"Language Spoken":lan}
+		data = {page_url": response.url","Logo Url":logo_url,"Title":title,"Sub-Title":sub_title,"Primary Location":primary_location,"Area Of Expertise":area_of_expertise,"About":about_text,"Website":website,"Language Spoken":lan}
 		print(data)
 		file = open('globaltrade.json','a')
 		file.write(json.dumps(data)+'\n')
